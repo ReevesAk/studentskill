@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <link rel="stylesheet" href="static/css/creation_tab.css">
+</head>
+  
+<body background="static/winter.jpg">
+
+  <div class="div-class2">
+    {% block content %}
+    <form action="{{ url_for('views.create_record') }}" class="studentSkillContainer" method="POST">
+      <h2>Enter a new student record</h2>
+      
+      <div class="name_form">
+        <label for="Firstname"><b>Firstname</b></label><br>
+        <input type="text" id="Firstname" placeholder="Firstname" name="fname" required><br><br>
+  
+        <label for="Lastname"><b>Lastname</b></label><br>
+        <input type="text" id="Lastname" placeholder="Lastname" name="lname" required><br><br>
+    
+        <label for="MobileNo"><b>Mobile No</b></label><br>
+        <input type="number" id="MobileNo" placeholder="Mobile No" name="mobileNo" required><br><br>
+
+        <label for="Email"><b>Email ID</b></label><br>
+        <input type="text" id="Email" placeholder="Email" name="email" multiple required><br><br>
+      </div>
+
+      <p>Please select your gender:</p>
+      <div class="gender">
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="male" value="Male">
+        <label for="female">Female</label>
+        <input type="radio" name="sex" id="female" value="Female">
+      </div> 
+
+      <p>Please select your date of birth:</p>
+      <input type="date" id="start" name="date"
+       min="1970-01-01" max="2002-12-31"><br><br>
+
+      <label for="qualification">Select your Qualification:</label>
+      <select name="qualification" id="qual">
+        <option value="b-tech">B-Tech</option>
+        <option value="mca">MCA</option>
+        <option value="grad">Graduation</option>
+        <option value="post-grad">Post-Graduation</option>
+        <option value="mba">MBA</option>
+        <option value="others">Others-Graduation</option>
+      </select> 
+
+      <p>Check all relevant skills:</p>
+
+      
+      <div class="gender">
+        <label for="languagetech">Java, Python or .Net</label>
+        <input type="checkbox" name="skills" id="languagetech" value="Java, Python or .Net">
+        <label for="database">Database</label>
+        <input type="checkbox" name="skills" id="database" value="Database">
+      </div> 
+    
+
+      <label for="img">Upload image:</label>
+      <input type="file" id="img" name="img" accept="image/*"><br><br>
+      
+      <div class="desc">
+        <label for="description">Description (up to 500 characters):</label><br>
+        <textarea id="description" required rows="6" cols="50" name="desc"  placeholder="Brief description of student"></textarea><br><br>
+      </div>
+
+      <button type="submit" class="saveBtn"><span>Save Record</span></button>
+    
+    </form>
+    {% endblock %}
+  </div>

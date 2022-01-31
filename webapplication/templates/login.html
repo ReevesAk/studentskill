@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="static/css/login.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body background="static/winter.jpg">
+<div class="div-class">
+  <form action="{{ url_for('auth.login') }}" class="container" method="POST">
+    <h1>Admin Login</h1>
+
+    <label for="username"><b>Username</b></label><br>
+    <input type="text" placeholder="Username" name="Uname" required><br><br>
+
+    <label for="psw"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="Pword" required><br><br>
+
+    <a href="forgetPasswordController" target="_blank">Forget password?</a>
+
+
+    <button type="submit" class="btn"><span>Login</span></button>
+
+  </form>
+</div>
+</body>
+</html>

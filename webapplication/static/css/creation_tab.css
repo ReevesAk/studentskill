@@ -1,0 +1,47 @@
+.div-class2 {
+  justify-content: center;
+  height: max-content;
+}
+
+input {
+ line-height: 2em;
+ width: 400px;
+}
+
+
+
+.img {
+  justify-content: space-between;
+}
+
+.skills {
+  display: block;
+  height: 15px;
+  width: 10px;
+}
+
+.desc {
+  width: inherit;
+  line-height: 20px;
+}
+
+#description textarea {
+  height: 70px;
+}
+
+.sex {
+  display: flex;
+  justify-content: space-between;
+  width: 5%;
+  margin: .5rem;
+}
+
+.saveBtn {
+  background-color: #4c98af;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
